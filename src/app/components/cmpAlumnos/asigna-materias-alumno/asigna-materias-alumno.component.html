@@ -1,0 +1,24 @@
+<div class="Container">
+    <h1 class="AlumTittle">Seleccione las materias que desea asignar:</h1>
+    <div class="BodyBox">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Selección</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Horario</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let materia of materias">
+                <input type="checkbox" class="CheckBox" [checked]="materia.mate_seleccion" (click)="onChecked(materia)">
+                <td>{{materia.mate_nombre}}</td>
+                <td>{{materia.mate_horarios}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="btn btn-secondary btn-block" (click)="saveMateSeleccion()" >Asignar</button>
+    </div>
+  </div>

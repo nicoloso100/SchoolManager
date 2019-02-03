@@ -1,0 +1,27 @@
+<div class="Container">
+    <h1 class="AlumTittle">Información del profesor que desea eliminar:</h1>
+    <div class="BodyBox">
+      <table class="table">
+        <tr>
+          <th> Identificaión: </th>
+          <td>{{profesorCompleto.prof_codigo}}</td>
+        </tr>
+        <tr>
+          <th>Nombre Completo: </th>
+          <td>{{profesorCompleto.prof_nombres}} {{profesorCompleto.prof_apellidos}}</td>
+        </tr>
+        <tr>
+          <th>Materias: </th>
+          <td>{{profesorCompleto.prof_materias}}</td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-secondary btn-block" (click)="eliminarProfesor()">Eliminar</button>
+          </td>
+          <td>
+            <button class="btn btn-secondary btn-block" (click)="Cancelar()">Cancelar</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>

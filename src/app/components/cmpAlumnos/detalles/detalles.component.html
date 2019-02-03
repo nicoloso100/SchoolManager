@@ -1,0 +1,44 @@
+<div class="Container">
+    <h1 class="AlumTittle">Información del alumno:</h1>
+    <div class="BodyBox">
+      <table class="table">
+        <tr>
+          <th> Código: </th>
+          <td>{{alumnoCompleto.alum_codigo}}</td>
+        </tr>
+        <tr>
+          <th>Nombres: </th>
+          <td>{{alumnoCompleto.alum_nombres}}</td>
+        </tr>
+        <tr>
+          <th>Apellidos: </th>
+          <td>{{alumnoCompleto.alum_apellidos}}</td>
+        </tr>
+        <tr>
+          <th>Teléfono: </th>
+          <td>{{alumnoCompleto.alum_telefono}}</td>
+        </tr>
+        <tr>
+          <th>Dirección: </th>
+          <td>{{alumnoCompleto.alum_direccion}}</td>
+        </tr>
+        <tr>
+          <th>Fecha de nacimiento: </th>
+          <td>{{alumnoCompleto.alum_nacimiento}}</td>
+        </tr>
+        <tr>
+          <th>Email: </th>
+          <td>{{alumnoCompleto.alum_email}}</td>
+        </tr>
+        <tr>
+          <th>Grupo: </th>
+          <td>{{alumnoCompleto.grup_indicativo}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button class="btn btn-secondary btn-block" (click)="volver()">Atrás</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,55 @@
+.Container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 70px auto;
+}
+.Container .AlumTittle{
+    margin: auto 0px auto 25px;
+    font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+
+.Container .BodyBox{
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 200px;
+}
+
+.table-responsive{
+    width: 90%;
+    height: 80%;
+    max-height: 500px;
+    margin: auto;
+}
+
+table tr.highlight {
+    background-color: #252d52 !important;
+    color: white;
+    
+}
+
+table tr:hover{
+    cursor: pointer;
+}
+
+.table td{
+    vertical-align: middle;
+}
+
+.Container .BodyBox .ButtonBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Container .BodyBox .ButtonBox .AlumButtom{
+    margin: 10px;
+    padding: 15px 5px 15px 5px;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}

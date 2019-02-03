@@ -1,0 +1,29 @@
+<div class="Contenedor">
+    <div class="ContBox col-md-6 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <form #formulario="ngForm" autocomplete="off">
+                    <div class="form-group">
+                        <input type="number" name="Identificación" [(ngModel)]="profesorCompleto.prof_codigo" placeholder="Identificación" class="form-control" autofocus required>
+                    </div>
+                    <div class="form-group">
+                            <input type="text" name="Nombres" [(ngModel)]="profesorCompleto.prof_nombres" placeholder="Nombres" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                            <input type="text" name="Apellidos" [(ngModel)]="profesorCompleto.prof_apellidos" placeholder="Apellidos" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                            <input type="number" name="Teléfono" [(ngModel)]="profesorCompleto.prof_telefono" placeholder="Teléfono" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="fechaInscripcion" placeholder="Fecha de inscripción" name="Fecha de inscripción" bsDatepicker class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                            <input type="text" name="Email" [(ngModel)]="profesorCompleto.prof_email" placeholder="Email" class="form-control" required>
+                    </div>
+                    <button [disabled]="!formulario.form.valid" class="btn btn-secondary btn-block" (click)="saveprofesor()">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

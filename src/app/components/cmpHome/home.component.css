@@ -1,0 +1,25 @@
+.ContHome{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.ContHome .ContText{
+    margin: auto;
+    text-align: center;
+}
+
+.ContHome .ContText h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4em;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.ContHome .ContText h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 50px;
+}

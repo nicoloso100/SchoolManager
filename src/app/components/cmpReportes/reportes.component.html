@@ -1,0 +1,40 @@
+<div class="Container">
+  <div class="MateriasHead">
+    <h1 class="AlumTittle">Escriba el código del alumno</h1>
+    <div class="form-group">
+        <input type="text" name="codigo" [(ngModel)]="codigo" placeholder="xxxxxxxxxxx" class="form-control" required>
+      </div>
+    <button class="btn btn-secondary btn-block" (click)="GeneraReporte()" >Generar reporte</button>
+  </div>
+    <div class="BodyBox">
+      <p>Nombre: {{alumnoCompleto.alum_nombres}} {{alumnoCompleto.alum_apellidos}}</p>
+      <p>Teléfono: {{alumnoCompleto.alum_telefono}}</p>
+      <p>Dirección: {{alumnoCompleto.alum_direccion}}</p>
+      <p>Fecha de nacimiento: {{alumnoCompleto.alum_nacimiento}}</p>
+      <p>email: {{alumnoCompleto.alum_email}}</p>
+      <p>Grupo: {{alumnoCompleto.grup_indicativo}}</p>
+      
+      <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Materia</th>
+            <th scope="col">Profesor</th>
+            <th scope="col">Periodo 1</th>
+            <th scope="col">Periodo 2</th>
+            <th scope="col">Periodo total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let repo of reporte" >
+            <td>{{repo.mate_nombre}}</td>
+            <td>{{repo.prof_nombre}}</td>
+            <td>{{repo.alumate_primer_periodo}}</td>
+            <td>{{repo.alumate_segundo_periodo}}</td>
+            <td>{{repo.total}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

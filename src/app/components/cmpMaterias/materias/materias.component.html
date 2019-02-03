@@ -1,0 +1,34 @@
+<div class="Container">
+    <div class="MateriasHead">
+      <h1 class="AlumTittle">Seleccione el grupo:</h1>
+      <div class="form-group">
+          <select (change)="selectChangeHandler($event)" class="custom-select"  required>
+            <option *ngFor="let grupo of grupos" [value]="grupo.grup_id">{{grupo.grup_indicativo}}</option>
+          </select>
+      </div>
+    </div>
+    <div class="BodyBox">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Código</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Horario</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let materia of materias" (click)="RowSelected(materia)" [ngClass] = "{'highlight' : materia.mate_id == materiasService.materiaSeleccionada}">
+                <td>{{materia.mate_id}}</td>
+                <td>{{materia.mate_nombre}}</td>
+                <td>{{materia.mate_horarios}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ButtonBox">
+          <a routerLink="/materias/registroMaterias" class="AlumButtom btn btn-secondary">Agregar</a>
+          <a routerLink="/materias/eliminaMateria" class="AlumButtom btn btn-secondary">Eliminar</a>
+      </div>
+    </div>
+  </div>

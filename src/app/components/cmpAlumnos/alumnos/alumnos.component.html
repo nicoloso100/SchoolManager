@@ -1,0 +1,31 @@
+<div class="Container">
+  <h1 class="AlumTittle">Lista de alumnos:</h1>
+  <div class="BodyBox">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Grupo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alum of alumnos" (click)="RowSelected(alum)" [ngClass] = "{'highlight' : alum.alum_codigo == alumnosService.alumnoSeleccionado}">
+            <td>{{alum.alum_codigo}}</td>
+            <td>{{alum.alum_nombre}}</td>
+            <td>{{alum.grup_indicativo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ButtonBox">
+        <a routerLink="/alumnos/insertaAlumno" class="AlumButtom btn btn-secondary">Agregar</a>
+        <a routerLink="/alumnos/detalles" class="AlumButtom btn btn-secondary">Detalles</a>
+        <a routerLink="/alumnos/eliminarAlumno" class="AlumButtom btn btn-secondary">Eliminar</a>
+        <a routerLink="/alumnos/editaAlumno" class="AlumButtom btn btn-secondary">Editar</a>
+        <a routerLink="/alumnos/asignaMateriasAlumno" class="AlumButtom btn btn-secondary">Asignar materias</a>
+        <a routerLink="/alumnos/calificaciones" class="AlumButtom btn btn-secondary">Asignar calificaciones</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="Contenedor">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Materia</th>
+                <th scope="col">Periodo 1</th>
+                <th scope="col">Periodo 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let materia of materias" >
+                <td>({{materia.materias_mate_id}}) {{materia.mate_nombre}}</td>
+                <td>
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="materia.alumate_primer_periodo" class="form-control" required>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="materia.alumate_segundo_periodo" class="form-control" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button class="btn btn-secondary btn-block" (click)="guardaCambios()">Guardar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

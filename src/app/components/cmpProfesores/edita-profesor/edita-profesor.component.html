@@ -1,0 +1,35 @@
+<div class="Contenedor">
+    <div class="ContBox col-md-6 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <form #formulario="ngForm" autocomplete="off">
+                    <div class="form-group">
+                        <span class="label label-success">Identificación:</span>
+                        <input type="number" name="Identificación" [(ngModel)]="profesorCompleto.prof_codigo" placeholder="Identificación" class="form-control" autofocus required disabled>
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-success">Nombres:</span>
+                          <input type="text" name="Nombres" [(ngModel)]="profesorCompleto.prof_nombres" placeholder="Nombres" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-success">Apellidos:</span>
+                          <input type="text" name="Apellidos" [(ngModel)]="profesorCompleto.prof_apellidos" placeholder="Apellidos" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-success">Teléfono:</span>
+                          <input type="number" name="Teléfono" [(ngModel)]="profesorCompleto.prof_telefono" placeholder="Teléfono" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-success">Fecha de inscripción:</span>
+                        <input type="text" [(ngModel)]="fechaInscripcion" placeholder="Fecha de inscripción" name="Fecha de inscripción" bsDatepicker class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <span class="label label-success">Email:</span>
+                          <input type="text" name="Email" [(ngModel)]="profesorCompleto.prof_email" placeholder="Email" class="form-control" required>
+                    </div>
+                    <button [disabled]="!formulario.form.valid" class="btn btn-secondary btn-block" (click)="saveProfesor()">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

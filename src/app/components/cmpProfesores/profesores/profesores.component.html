@@ -1,0 +1,30 @@
+<div class="Container">
+    <h1 class="AlumTittle">Lista de profesores:</h1>
+    <div class="BodyBox">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Identificación</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Materias (Grupo)</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let profesor of profesores" (click)="RowSelected(profesor)" [ngClass] = "{'highlight' : profesor.prof_codigo == profesoresService.profesorSeleccionado}">
+                <td>{{profesor.prof_codigo}}</td>
+                <td>{{profesor.prof_nombres}}</td>
+                <td>{{profesor.prof_materias}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ButtonBox">
+          <a routerLink="/profesores/insertaProfesor" class="AlumButtom btn btn-secondary">Agregar</a>
+          <a routerLink="/profesores/detallesProfesor" class="AlumButtom btn btn-secondary">Detalles</a>
+          <a routerLink="/profesores/eliminaProfesor" class="AlumButtom btn btn-secondary">Eliminar</a>
+          <a routerLink="/profesores/editaProfesor" class="AlumButtom btn btn-secondary">Editar</a>
+          <a routerLink="/profesores/asignaMateriasProfesor" class="AlumButtom btn btn-secondary">Asignar materias</a>
+      </div>
+    </div>
+  </div>

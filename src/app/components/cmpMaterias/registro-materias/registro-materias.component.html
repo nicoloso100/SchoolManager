@@ -1,0 +1,53 @@
+<div class="Contenedor">
+    <div class="ContBox col-md-6 offset-md-2">
+        <div class="card">
+            <div class="card-body">
+                <form #formulario="ngForm" autocomplete="off">
+                    <div class="form-group">
+                        <input type="text" name="id" [(ngModel)]="registroMateria.mate_id"  class="form-control" disabled>
+                    </div>
+                    <div class="form-group">
+                            <input type="text" name="Nombre" [(ngModel)]="registroMateria.mate_nombre" placeholder="Nombre" class="form-control" required>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Día</th>
+                                <th scope="col">Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let campos of CamposDiaHora" >
+                                <td>
+                                    <select (change)="selectChangeDia($event, campos)" class="custom-select" required>
+                                        <option *ngFor="let dia of dias" [value]="dia.id">{{dia.dia}}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select (change)="selectChangeHora($event, campos)" class="custom-select"  required>
+                                        <option *ngFor="let hora of horas" [value]="hora.hora_id">{{hora.hora_rango}}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn btn-secondary btn-block" (click)="agregaCampo()">Agregar nuevo campo</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-secondary btn-block" (click)="eliminaCampo()">Elimina último campo</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-group">
+                        <span class="label label-success">Grupo:</span>
+                        <select (change)="selectChangeGrupo($event)" class="custom-select" required>
+                                <option *ngFor="let grupo of grupos" [value]="grupo.grup_id">{{grupo.grup_indicativo}}</option>
+                        </select>
+                    </div>
+                    <button [disabled]="!formulario.form.valid" class="btn btn-secondary btn-block" (click)="saveMateria()">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

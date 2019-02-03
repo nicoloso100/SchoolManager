@@ -1,0 +1,24 @@
+.Container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 70px auto;
+}
+.Container .AlumTittle{
+    margin: auto 0px auto 25px;
+    font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+
+.Container .BodyBox{
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+    margin: auto;
+}
+
+.CheckBox{
+    margin-top: 13px;
+    margin-left: 10px;
+}

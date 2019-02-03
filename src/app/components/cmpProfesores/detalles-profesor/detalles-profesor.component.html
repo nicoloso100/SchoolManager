@@ -1,0 +1,36 @@
+<div class="Container">
+    <h1 class="AlumTittle">Información del profesor:</h1>
+    <div class="BodyBox">
+      <table class="table">
+        <tr>
+          <th> Identificación: </th>
+          <td>{{profesorCompleto.prof_codigo}}</td>
+        </tr>
+        <tr>
+          <th>Nombres: </th>
+          <td>{{profesorCompleto.prof_nombres}}</td>
+        </tr>
+        <tr>
+          <th>Apellidos: </th>
+          <td>{{profesorCompleto.prof_apellidos}}</td>
+        </tr>
+        <tr>
+          <th>Teléfono: </th>
+          <td>{{profesorCompleto.prof_telefono}}</td>
+        </tr>
+        <tr>
+          <th>Fecha de inscripción: </th>
+          <td>{{profesorCompleto.prof_fecha_inscripcion}}</td>
+        </tr>
+        <tr>
+          <th>Email: </th>
+          <td>{{profesorCompleto.prof_email}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button class="btn btn-secondary btn-block" (click)="volver()">Atrás</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
